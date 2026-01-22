@@ -18,7 +18,7 @@ export default function About() {
                     className="relative"
                 >
                     <img
-                        src="https://images.unsplash.com/photo-1554048612-387768052bf7?q=80&w=800&auto=format&fit=crop"
+                        src="https://images.unsplash.com/photo-1552168324-d612d77725e3?q=80&w=800&auto=format&fit=crop"
                         alt="Photographer"
                         className="rounded-2xl grayscale hover:grayscale-0 transition-all duration-700 w-full object-cover shadow-2xl"
                     />

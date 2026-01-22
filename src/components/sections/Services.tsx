@@ -26,7 +26,7 @@ const services = [
 
 export default function Services() {
     return (
-        <section id="services" className="py-24 px-6 md:px-12 bg-black">
+        <section id="services" className="py-24 px-4 md:px-12 bg-black">
             <div className="max-w-7xl mx-auto">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -34,7 +34,7 @@ export default function Services() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4">Services</h2>
+                    <h2 className="text-2xl md:text-5xl font-bold mb-4">Services</h2>
                     <p className="text-gray-400 max-w-2xl mx-auto">
                         Tailored photography packages designed to meet your specific needs with uncompromising quality.
                     </p>

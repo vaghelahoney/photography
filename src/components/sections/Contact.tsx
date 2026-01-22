@@ -5,7 +5,7 @@ import { Send } from "lucide-react";
 
 export default function Contact() {
     return (
-        <section id="contact" className="py-24 px-6 md:px-12 flex justify-center items-center min-h-[70vh] relative">
+        <section id="contact" className="py-24 px-4 md:px-12 flex justify-center items-center min-h-[70vh] relative">
             {/* Background gradient */}
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-neutral-900/50 pointer-events-none" />
 
@@ -16,7 +16,7 @@ export default function Contact() {
                     viewport={{ once: true }}
                     className="text-center mb-12"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4">Get in Touch</h2>
+                    <h2 className="text-2xl md:text-5xl font-bold mb-4">Get in Touch</h2>
                     <p className="text-gray-400">Let's create something beautiful together.</p>
                 </motion.div>
 

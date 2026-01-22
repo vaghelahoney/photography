@@ -27,14 +27,14 @@ export default function Gallery() {
     };
 
     return (
-        <section id="gallery" className="py-20 px-6 md:px-12 bg-[#0a0a0a]">
+        <section id="gallery" className="py-20 px-4 md:px-12 bg-[#0a0a0a]">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="text-center mb-12"
             >
-                <h2 className="text-3xl md:text-5xl font-bold mb-4">Selected Works</h2>
+                <h2 className="text-2xl md:text-5xl font-bold mb-4">Selected Works</h2>
                 <div className="flex flex-wrap justify-center gap-4 mt-8">
                     {categories.map((category) => (
                         <button
@@ -122,16 +122,16 @@ export default function Gallery() {
 
                         <button
                             onClick={(e) => { e.stopPropagation(); navigateGallery("prev"); }}
-                            className="absolute left-4 md:left-10 text-white/50 hover:text-white hover:scale-110 transition-all hidden md:block z-50"
+                            className="absolute left-2 md:left-10 text-white/50 hover:text-white hover:scale-110 transition-all z-50 p-2 bg-black/20 rounded-full md:bg-transparent"
                         >
-                            <ChevronLeft size={48} />
+                            <ChevronLeft size={32} className="md:w-12 md:h-12" />
                         </button>
 
                         <button
                             onClick={(e) => { e.stopPropagation(); navigateGallery("next"); }}
-                            className="absolute right-4 md:right-10 text-white/50 hover:text-white hover:scale-110 transition-all hidden md:block z-50"
+                            className="absolute right-2 md:right-10 text-white/50 hover:text-white hover:scale-110 transition-all z-50 p-2 bg-black/20 rounded-full md:bg-transparent"
                         >
-                            <ChevronRight size={48} />
+                            <ChevronRight size={32} className="md:w-12 md:h-12" />
                         </button>
 
                         <motion.div
@@ -146,6 +146,7 @@ export default function Gallery() {
                                         src={selectedItem.src}
                                         controls
                                         autoPlay
+                                        playsInline
                                         poster={selectedItem.poster}
                                         className="max-w-full max-h-[85vh] w-auto h-auto"
                                     />

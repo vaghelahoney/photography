@@ -25,18 +25,21 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav
-            className={cn(
-                "fixed top-0 left-0 right-0 z-50 transition-all duration-300 md:py-6 py-4 px-6 md:px-12 flex justify-between items-center",
-                scrolled ? "bg-black/50 backdrop-blur-md py-4" : "bg-transparent"
-            )}
-        >
-            <div className="text-2xl font-bold tracking-widest uppercase">
+        <nav className="fixed top-0 left-0 right-0 z-50 md:py-6 py-4 px-4 md:px-12 flex justify-between items-center h-20">
+            {/* Background Layer */}
+            <div
+                className={cn(
+                    "absolute inset-0 transition-all duration-300 -z-10",
+                    scrolled ? "bg-black/80 backdrop-blur-md" : "bg-transparent"
+                )}
+            />
+
+            <div className="text-2xl font-bold tracking-widest uppercase z-50 relative">
                 Lumina
             </div>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex space-x-8 z-50 relative">
                 {navLinks.map((link) => (
                     <a
                         key={link.name}
@@ -50,7 +53,7 @@ export default function Navbar() {
 
             {/* Mobile Menu Button */}
             <button
-                className="md:hidden z-50"
+                className="md:hidden z-50 relative"
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label="Toggle menu"
             >
@@ -64,15 +67,16 @@ export default function Navbar() {
                         initial={{ opacity: 0, x: "100%" }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: "100%" }}
-                        transition={{ duration: 0.5, ease: "easeInOut" }}
-                        className="fixed inset-0 bg-black flex flex-col items-center justify-center space-y-8 md:hidden"
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="fixed inset-0 bg-black z-40 flex flex-col items-center justify-center space-y-8 md:hidden"
+                        style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, height: '100vh', width: '100vw' }}
                     >
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
                                 href={link.href}
                                 onClick={() => setIsOpen(false)}
-                                className="text-2xl font-light tracking-widest hover:text-gray-400 transition-colors"
+                                className="text-3xl font-light tracking-widest hover:text-gray-400 transition-colors"
                             >
                                 {link.name}
                             </a>

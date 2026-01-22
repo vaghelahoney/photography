@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
     return (
-        <section id="about" className="py-24 px-6 md:px-12 relative overflow-hidden flex items-center justify-center min-h-[80vh]">
+        <section id="about" className="py-24 px-4 md:px-12 relative overflow-hidden flex items-center justify-center min-h-[80vh]">
             {/* Abstract Background Elements */}
             <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-[100px] -z-10" />
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-[100px] -z-10" />
@@ -35,7 +35,7 @@ export default function About() {
                 >
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-50" />
 
-                    <h2 className="text-3xl md:text-4xl font-bold mb-6">Behind the Lens</h2>
+                    <h2 className="text-2xl md:text-4xl font-bold mb-6">Behind the Lens</h2>
                     <p className="text-gray-300 leading-relaxed text-lg mb-6">
                         I am a visual storyteller driven by the desire to capture the raw emotions and fleeting moments that define our lives. With over a decade of experience, I've learned that the best photos aren't just seen—they're felt.
                     </p>

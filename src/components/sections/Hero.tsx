@@ -30,7 +30,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeOut" }}
-                    className="text-5xl md:text-8xl font-bold tracking-tighter mb-4 gradient-text"
+                    className="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tighter mb-4 gradient-text"
                 >
                     LUMINA
                 </motion.h1>
@@ -38,7 +38,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-                    className="text-xl md:text-2xl font-light tracking-widest text-gray-200 uppercase"
+                    className="text-lg sm:text-xl md:text-2xl font-light tracking-widest text-gray-200 uppercase"
                 >
                     Capturing Moments in Time
                 </motion.p>
